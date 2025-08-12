@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Alegreya', serif;
+}
+
+@layer base {
+  :root {
+    --background: 60 56% 91%; /* Light Beige #F5F5DC */
+    --foreground: 0 0% 10%; /* Darker for contrast */
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 0 0% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+    --primary: 340 75% 86%; /* Soft Pink #F4B4C7 */
+    --primary-foreground: 340 50% 30%; /* Darker pink/maroon for text on soft pink */
+    --secondary: 300 26% 88%; /* Lighter Pale Rose for secondary elements */
+    --secondary-foreground: 300 50% 25%;
+    --muted: 60 30% 85%; /* Muted version of beige */
+    --muted-foreground: 60 10% 40%;
+    --accent: 300 26% 82%; /* Pale Rose #D8BFD8 */
+    --accent-foreground: 300 50% 25%; /* Darker purple for text on pale rose */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 60 30% 80%; /* Slightly darker beige for borders */
+    --input: 60 30% 80%;
+    --ring: 340 75% 70%; /* Slightly darker/more saturated pink for ring */
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+  .dark {
+    /* Assuming dark mode is not a primary concern, but providing basic dark theme adjustments */
+    --background: 0 0% 10%; 
+    --foreground: 60 30% 90%;
+    --card: 0 0% 12%;
+    --card-foreground: 60 30% 90%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 60 30% 90%;
+    --primary: 340 60% 70%; 
+    --primary-foreground: 340 80% 20%;
+    --secondary: 300 20% 65%;
+    --secondary-foreground: 300 40% 15%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 300 20% 60%;
+    --accent-foreground: 300 40% 10%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 25%;
+    --input: 0 0% 25%;
+    --ring: 340 60% 50%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
